@@ -1,0 +1,200 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://beta2015.portablenorthpole.com/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "nav[class=\"site-header__account\"] a[ui-sref=\"authentication\"] "
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.tile.tile--signup"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"presignup\"] button[wz-next=\"\"]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "firstName"
+      },
+      "text": "selenium"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "email"
+      },
+      "text": "selenium@ugm.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "emailConfirm"
+      },
+      "text": "selenium@ugm.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "password"
+      },
+      "text": "123456"
+    },
+    {
+      "type": "setElementSelected",
+      "step_name": "10",
+      "locator": {
+        "type": "css selector",
+        "value": "form[name=\"signupForm\"] select[id=\"age\"] option[value=\"2\"]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "form[name=\"signupForm\"] button[type=\"submit\"]"
+      }
+    },
+    {
+      "type": "waitForCookiePresent",
+      "name": "pnpAccess"
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"success\"]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"success\"] button[type=\"button\"]"
+      }
+    },
+    {
+      "type": "mouseOverElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.username"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "nav[class=\"site-header__account\"] a[ui-sref=\"authentication.logout\"] "
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "nav[class=\"site-header__account\"] a[ui-sref=\"authentication\"] "
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.tile.tile--login"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"login\"]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "form[name=\"loginForm\"] #email"
+      },
+      "text": "selenium@ugm.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "form[name=\"loginForm\"] #password"
+      },
+      "text": "123456"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "form[name=\"loginForm\"] button[type=\"submit\"]"
+      }
+    },
+    {
+      "type": "waitForCookiePresent",
+      "name": "pnpAccess"
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"success\"]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "section[data-title=\"success\"] button[type=\"button\"]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "nav[class=\"site-header__account\"] a[ui-sref=\"myAccount.index\"] "
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div[class=\"btn-group\"] button[type=\"button\"]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div[role=\"alertdialog\"] div[class=\"content\"] button[ng-click=\"confirm(1)\"]"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
